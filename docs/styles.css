@@ -54,6 +54,12 @@ input {
   font-size: 14px;
 }
 
+.privacy-disclaimer {
+  margin-top: 10px !important;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 #form-nav {
   display: grid;
   gap: 12px;
