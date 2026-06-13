@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./styles.css">
   </head>
   <body>
+    <div id="menu-overlay" class="menu-overlay" hidden></div>
     <main class="app-shell">
-      <aside class="sidebar">
+      <aside class="sidebar" id="sidebar">
         <div>
           <h1>Βοηθός Ερωτηματολογίων Ψωρίασης</h1>
           <p id="draft-status">Φόρτωση...</p>
@@ -20,10 +21,18 @@
         <div id="form-nav" role="list" aria-label="Πρόοδος ερωτηματολογίων"></div>
         <div id="generate-panel" class="generate-panel">
           <button id="generate-button" type="button" disabled>Δημιουργία PDF</button>
+          <button id="clear-button-mobile" type="button" class="clear-button-mobile">Καθαρισμός προσχεδίου</button>
         </div>
       </aside>
 
       <section class="quiz-panel">
+        <div class="mobile-topbar">
+          <button id="menu-button" type="button" class="menu-button" aria-expanded="false" aria-controls="sidebar">Μενού</button>
+          <div class="mobile-topbar__meta">
+            <strong id="mobile-form-title"></strong>
+            <span id="mobile-progress-label"></span>
+          </div>
+        </div>
         <header class="quiz-header">
           <div>
             <p id="form-title"></p>

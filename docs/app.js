@@ -8,8 +8,13 @@ let answers = {};
 let currentIndex = 0;
 
 const elements = {
+  sidebar: document.querySelector('#sidebar'),
+  menuButton: document.querySelector('#menu-button'),
+  menuOverlay: document.querySelector('#menu-overlay'),
   draftStatus: document.querySelector('#draft-status'),
   formNav: document.querySelector('#form-nav'),
+  mobileFormTitle: document.querySelector('#mobile-form-title'),
+  mobileProgressLabel: document.querySelector('#mobile-progress-label'),
   formTitle: document.querySelector('#form-title'),
   formDescription: document.querySelector('#form-description'),
   questionLabel: document.querySelector('#question-label'),
@@ -22,6 +27,7 @@ const elements = {
   errorMessage: document.querySelector('#error-message'),
   backButton: document.querySelector('#back-button'),
   clearButton: document.querySelector('#clear-button'),
+  clearButtonMobile: document.querySelector('#clear-button-mobile'),
   nextButton: document.querySelector('#next-button'),
   generateButton: document.querySelector('#generate-button'),
   resultPanel: document.querySelector('#result-panel'),
@@ -110,6 +116,25 @@ function allVisibleQuestionsAnswered() {
   return visibleQuestions.length > 0 && visibleQuestions.every(isAnswered);
 }
 
+function closeMenu() {
+  elements.sidebar.classList.remove('is-open');
+  elements.menuOverlay.hidden = true;
+  elements.menuButton.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('menu-open');
+}
+
+function openMenu() {
+  elements.sidebar.classList.add('is-open');
+  elements.menuOverlay.hidden = false;
+  elements.menuButton.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('menu-open');
+}
+
+function toggleMenu() {
+  if (elements.sidebar.classList.contains('is-open')) closeMenu();
+  else openMenu();
+}
+
 function updateGenerateState() {
   const complete = allVisibleQuestionsAnswered();
   elements.generateButton.disabled = !complete;
@@ -142,6 +167,7 @@ function renderNav() {
       const target = visibleQuestions.findIndex((question) => question.formId === form.id);
       if (target >= 0) {
         currentIndex = target;
+        closeMenu();
         render();
       }
     });
@@ -343,6 +369,8 @@ function render() {
   elements.questionPrompt.hidden = !prompt;
   elements.answerHint.hidden = question.type !== 'choice' && question.type !== 'scale';
   elements.progressLabel.textContent = `${currentIndex + 1} από ${visibleQuestions.length}`;
+  elements.mobileFormTitle.textContent = form?.title ?? question.formId;
+  elements.mobileProgressLabel.textContent = `${currentIndex + 1} από ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
   elements.backButton.disabled = currentIndex === 0;
   elements.nextButton.hidden = currentIndex === visibleQuestions.length - 1;
@@ -425,18 +453,28 @@ elements.nextButton.addEventListener('click', () => {
 
 elements.generateButton.addEventListener('click', generate);
 
+elements.menuButton.addEventListener('click', toggleMenu);
+elements.menuOverlay.addEventListener('click', closeMenu);
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') closeMenu();
+});
+
 elements.questionForm.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!elements.nextButton.hidden) elements.nextButton.click();
 });
 
-elements.clearButton.addEventListener('click', () => {
+function clearDraft() {
   answers = {};
   localStorage.removeItem(STORAGE_KEY);
   elements.draftStatus.textContent = 'Το προσχέδιο διαγράφηκε';
   currentIndex = 0;
+  closeMenu();
   render();
-});
+}
+
+elements.clearButton.addEventListener('click', clearDraft);
+elements.clearButtonMobile.addEventListener('click', clearDraft);
 
 async function init() {
   const response = await fetch(IS_STATIC ? './forms.json' : '/api/forms');
