@@ -14,6 +14,7 @@ const elements = {
   formTitle: document.querySelector('#form-title'),
   formDescription: document.querySelector('#form-description'),
   questionLabel: document.querySelector('#question-label'),
+  questionPrompt: document.querySelector('#question-prompt'),
   progressLabel: document.querySelector('#progress-label'),
   progressFill: document.querySelector('#progress-fill'),
   controlHost: document.querySelector('#control-host'),
@@ -337,6 +338,9 @@ function render() {
   elements.formDescription.textContent = description;
   elements.formDescription.hidden = !description;
   elements.questionLabel.textContent = question.label;
+  const prompt = question.prompt ?? '';
+  elements.questionPrompt.textContent = prompt;
+  elements.questionPrompt.hidden = !prompt;
   elements.progressLabel.textContent = `${currentIndex + 1} of ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
   elements.backButton.disabled = currentIndex === 0;
