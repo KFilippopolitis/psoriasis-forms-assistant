@@ -97,7 +97,7 @@ function isAnswered(question) {
 }
 
 function formProgress(formId) {
-  const list = questions.filter((question) => question.formId === formId && isVisible(question));
+  const list = questions.filter((question) => question.formId === formId && isVisible(question) && question.required);
   const answered = list.filter(isAnswered).length;
   const percent = list.length ? Math.round((answered / list.length) * 100) : 0;
   return { answered, total: list.length, percent };
