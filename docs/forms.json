@@ -1,0 +1,2636 @@
+{
+  "forms": [
+    {
+      "id": "dlqi",
+      "title": "DLQI",
+      "questions": [
+        {
+          "id": "dlqi_1",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "1. Κνησμός, ενόχληση, πόνος ή τσούξιμο δέρματος την περασμένη εβδομάδα",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_2",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "2. Ενόχληση ή απασχόληση από την κατάσταση του δέρματος",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_3",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "3. Επηρεάστηκαν ψώνια, σπίτι ή κήπος;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_4",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "4. Επηρεάστηκε η επιλογή ρούχων;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_5",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "5. Επηρεάστηκαν κοινωνικές δραστηριότητες ή χόμπι;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_6",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "6. Δυσκολία σε σπορ;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_7",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "7. Σας εμπόδισε η δερματική κατάσταση να εργαστείτε ή να μελετήσετε;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_7_if_no",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "7β. Αν όχι, πόσο πρόβλημα δημιούργησε στη δουλειά ή μελέτη;",
+          "required": true,
+          "showIf": {
+            "id": "dlqi_7",
+            "value": "no"
+          },
+          "options": [
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_8",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "8. Προβλήματα με σύντροφο, στενούς φίλους ή συγγενείς;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_9",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "9. Προβλήματα στη σεξουαλική ζωή;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        },
+        {
+          "id": "dlqi_10",
+          "formId": "dlqi",
+          "type": "choice",
+          "label": "10. Η θεραπεία του δέρματος αποτέλεσε πρόβλημα;",
+          "required": true,
+          "options": [
+            {
+              "value": "very_much",
+              "label": "Πάρα πολύ"
+            },
+            {
+              "value": "much",
+              "label": "Πολύ"
+            },
+            {
+              "value": "a_little",
+              "label": "Λίγο"
+            },
+            {
+              "value": "not_at_all",
+              "label": "Καθόλου"
+            },
+            {
+              "value": "not_relevant",
+              "label": "Άσχετο"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eq5d",
+      "title": "EQ-5D",
+      "questions": [
+        {
+          "id": "eq5d_mobility",
+          "formId": "eq5d",
+          "type": "choice",
+          "label": "Κινητικότητα",
+          "required": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Δεν έχω κανένα πρόβλημα στο περπάτημα"
+            },
+            {
+              "value": "2",
+              "label": "Έχω μερικά προβλήματα στο περπάτημα"
+            },
+            {
+              "value": "3",
+              "label": "Είμαι καθηλωμένος/η στο κρεβάτι"
+            }
+          ]
+        },
+        {
+          "id": "eq5d_selfcare",
+          "formId": "eq5d",
+          "type": "choice",
+          "label": "Αυτοεξυπηρέτηση",
+          "required": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Δεν έχω κανένα πρόβλημα με την αυτοεξυπηρέτησή μου"
+            },
+            {
+              "value": "2",
+              "label": "Έχω μερικά προβλήματα στο να πλένομαι και να ντύνομαι"
+            },
+            {
+              "value": "3",
+              "label": "Είμαι ανίκανος/η να πλυθώ ή να ντυθώ"
+            }
+          ]
+        },
+        {
+          "id": "eq5d_activities",
+          "formId": "eq5d",
+          "type": "choice",
+          "label": "Συνηθισμένες δραστηριότητες",
+          "required": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Κανένα πρόβλημα"
+            },
+            {
+              "value": "2",
+              "label": "Μερικά προβλήματα"
+            },
+            {
+              "value": "3",
+              "label": "Ανίκανος/η να τις εκτελώ"
+            }
+          ]
+        },
+        {
+          "id": "eq5d_pain",
+          "formId": "eq5d",
+          "type": "choice",
+          "label": "Πόνος / Δυσφορία",
+          "required": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Καθόλου πόνο ή δυσφορία"
+            },
+            {
+              "value": "2",
+              "label": "Μέτριο πόνο ή δυσφορία"
+            },
+            {
+              "value": "3",
+              "label": "Υπερβολικό πόνο ή δυσφορία"
+            }
+          ]
+        },
+        {
+          "id": "eq5d_anxiety",
+          "formId": "eq5d",
+          "type": "choice",
+          "label": "Άγχος / Θλίψη",
+          "required": true,
+          "options": [
+            {
+              "value": "1",
+              "label": "Καθόλου άγχος ή θλίψη"
+            },
+            {
+              "value": "2",
+              "label": "Μέτριο άγχος ή θλίψη"
+            },
+            {
+              "value": "3",
+              "label": "Υπερβολικό άγχος ή θλίψη"
+            }
+          ]
+        },
+        {
+          "id": "eq5d_vas",
+          "formId": "eq5d",
+          "type": "number",
+          "label": "Η υγεία σας σήμερα, από 0 έως 100",
+          "required": true,
+          "inputType": "number",
+          "min": 0,
+          "max": 100
+        }
+      ]
+    },
+    {
+      "id": "hads",
+      "title": "HADS",
+      "questions": [
+        {
+          "id": "hads_1",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Νιώθω ανήσυχος/η ή εκνευρισμένος/η",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σχεδόν πάντα"
+            },
+            {
+              "value": "1",
+              "label": "Συχνά"
+            },
+            {
+              "value": "2",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "3",
+              "label": "Ποτέ"
+            }
+          ]
+        },
+        {
+          "id": "hads_2",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Εξακολουθώ να απολαμβάνω τα πράγματα που απολάμβανα παλιότερα",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σίγουρα το ίδιο όσο και παλιά"
+            },
+            {
+              "value": "1",
+              "label": "Όχι τόσο όσο παλιά"
+            },
+            {
+              "value": "2",
+              "label": "Πολύ λίγο"
+            },
+            {
+              "value": "3",
+              "label": "Σχεδόν καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "hads_3",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Με πιάνει φόβος σαν να πρόκειται να συμβεί κάτι απαίσιο",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Ακριβώς, πολύ έντονα"
+            },
+            {
+              "value": "1",
+              "label": "Ναι, αλλά όχι τόσο έντονα"
+            },
+            {
+              "value": "2",
+              "label": "Λίγο, αλλά δεν με ανησυχεί"
+            },
+            {
+              "value": "3",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "hads_4",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Μπορώ να γελώ και να βλέπω την αστεία πλευρά των πραγμάτων",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Το ίδιο όσο και παλιά"
+            },
+            {
+              "value": "1",
+              "label": "Όχι τόσο όσο παλιά"
+            },
+            {
+              "value": "2",
+              "label": "Σίγουρα όχι τόσο πολύ τώρα"
+            },
+            {
+              "value": "3",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "hads_5",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Ανήσυχες σκέψεις περνούν από το μυαλό μου",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σχεδόν πάντα"
+            },
+            {
+              "value": "1",
+              "label": "Συχνά"
+            },
+            {
+              "value": "2",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "3",
+              "label": "Σχεδόν ποτέ"
+            }
+          ]
+        },
+        {
+          "id": "hads_6",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Νιώθω κεφάτος/η",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Ποτέ"
+            },
+            {
+              "value": "1",
+              "label": "Σπάνια"
+            },
+            {
+              "value": "2",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "3",
+              "label": "Σχεδόν πάντα"
+            }
+          ]
+        },
+        {
+          "id": "hads_7",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Μπορώ να κάθομαι ήρεμος/η και να νιώθω χαλαρός/ή",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Πάντα"
+            },
+            {
+              "value": "1",
+              "label": "Συνήθως"
+            },
+            {
+              "value": "2",
+              "label": "Όχι συχνά"
+            },
+            {
+              "value": "3",
+              "label": "Ποτέ"
+            }
+          ]
+        },
+        {
+          "id": "hads_8",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Νιώθω σαν να έχουν πέσει οι ρυθμοί μου",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σχεδόν πάντα"
+            },
+            {
+              "value": "1",
+              "label": "Πολύ συχνά"
+            },
+            {
+              "value": "2",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "3",
+              "label": "Ποτέ"
+            }
+          ]
+        },
+        {
+          "id": "hads_9",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Με πιάνει φόβος, σαν κόμπος στο στομάχι",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Ποτέ"
+            },
+            {
+              "value": "1",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "2",
+              "label": "Συχνά"
+            },
+            {
+              "value": "3",
+              "label": "Πολύ συχνά"
+            }
+          ]
+        },
+        {
+          "id": "hads_10",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Έχω χάσει το ενδιαφέρον για την εμφάνισή μου",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σίγουρα"
+            },
+            {
+              "value": "1",
+              "label": "Τη φροντίζω πολύ λιγότερο από όσο θα έπρεπε"
+            },
+            {
+              "value": "2",
+              "label": "Μάλλον τη φροντίζω λιγότερο από όσο θα έπρεπε"
+            },
+            {
+              "value": "3",
+              "label": "Τη φροντίζω όπως πάντοτε"
+            }
+          ]
+        },
+        {
+          "id": "hads_11",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Νιώθω νευρικός/ή και ανήσυχος/η, σαν να πρέπει να είμαι σε κίνηση",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Σε πολύ μεγάλο βαθμό"
+            },
+            {
+              "value": "1",
+              "label": "Σε αρκετά μεγάλο βαθμό"
+            },
+            {
+              "value": "2",
+              "label": "Όχι πάρα πολύ"
+            },
+            {
+              "value": "3",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "hads_12",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Περιμένω με χαρά διάφορα πράγματα",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Το ίδιο όπως και παλιά"
+            },
+            {
+              "value": "1",
+              "label": "Μάλλον λιγότερο από ό,τι παλιά"
+            },
+            {
+              "value": "2",
+              "label": "Σίγουρα λιγότερο από ό,τι παλιά"
+            },
+            {
+              "value": "3",
+              "label": "Καθόλου"
+            }
+          ]
+        },
+        {
+          "id": "hads_13",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Με πιάνουν ξαφνικά συναισθήματα πανικού",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Πολύ συχνά"
+            },
+            {
+              "value": "1",
+              "label": "Συχνά"
+            },
+            {
+              "value": "2",
+              "label": "Σπάνια"
+            },
+            {
+              "value": "3",
+              "label": "Ποτέ"
+            }
+          ]
+        },
+        {
+          "id": "hads_14",
+          "formId": "hads",
+          "type": "choice",
+          "label": "Μπορώ να απολαμβάνω βιβλίο ή ραδιοφωνικό/τηλεοπτικό πρόγραμμα",
+          "required": true,
+          "options": [
+            {
+              "value": "0",
+              "label": "Συχνά"
+            },
+            {
+              "value": "1",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "2",
+              "label": "Σπάνια"
+            },
+            {
+              "value": "3",
+              "label": "Σχεδόν ποτέ"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pest",
+      "title": "PEST",
+      "questions": [
+        {
+          "id": "pest_joints",
+          "formId": "pest",
+          "type": "multi",
+          "label": "Σημειώστε τις αρθρώσεις που σας έχουν προκαλέσει δυσφορία",
+          "required": false,
+          "options": [
+            {
+              "value": "neck",
+              "label": "Αυχένας"
+            },
+            {
+              "value": "left_shoulder",
+              "label": "Αριστερός ώμος"
+            },
+            {
+              "value": "right_shoulder",
+              "label": "Δεξιός ώμος"
+            },
+            {
+              "value": "upper_back",
+              "label": "Άνω πλάτη"
+            },
+            {
+              "value": "lower_back",
+              "label": "Κάτω πλάτη"
+            },
+            {
+              "value": "waist",
+              "label": "Περιοχή μέσης"
+            },
+            {
+              "value": "left_elbow",
+              "label": "Αριστερός αγκώνας"
+            },
+            {
+              "value": "right_elbow",
+              "label": "Δεξιός αγκώνας"
+            },
+            {
+              "value": "left_wrist",
+              "label": "Αριστερός καρπός"
+            },
+            {
+              "value": "right_wrist",
+              "label": "Δεξιός καρπός"
+            },
+            {
+              "value": "left_hand",
+              "label": "Αριστερό χέρι / δάκτυλα"
+            },
+            {
+              "value": "right_hand",
+              "label": "Δεξί χέρι / δάκτυλα"
+            },
+            {
+              "value": "left_hip",
+              "label": "Αριστερό ισχίο"
+            },
+            {
+              "value": "right_hip",
+              "label": "Δεξί ισχίο"
+            },
+            {
+              "value": "left_thumb",
+              "label": "Αριστερός αντίχειρας"
+            },
+            {
+              "value": "right_thumb",
+              "label": "Δεξιός αντίχειρας"
+            },
+            {
+              "value": "left_knee",
+              "label": "Αριστερό γόνατο"
+            },
+            {
+              "value": "right_knee",
+              "label": "Δεξί γόνατο"
+            },
+            {
+              "value": "left_ankle",
+              "label": "Αριστερός αστράγαλος"
+            },
+            {
+              "value": "right_ankle",
+              "label": "Δεξιός αστράγαλος"
+            },
+            {
+              "value": "left_foot",
+              "label": "Αριστερό πόδι / δάκτυλα ποδιών"
+            },
+            {
+              "value": "right_foot",
+              "label": "Δεξί πόδι / δάκτυλα ποδιών"
+            }
+          ]
+        },
+        {
+          "id": "pest_1",
+          "formId": "pest",
+          "type": "choice",
+          "label": "1. Είχατε ποτέ πρησμένη άρθρωση ή αρθρώσεις;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "pest_2",
+          "formId": "pest",
+          "type": "choice",
+          "label": "2. Σας είπε ποτέ γιατρός ότι έχετε αρθρίτιδα;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "pest_3",
+          "formId": "pest",
+          "type": "choice",
+          "label": "3. Έχουν τα νύχια σας τρύπες ή κοιλώματα;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "pest_4",
+          "formId": "pest",
+          "type": "choice",
+          "label": "4. Είχατε πόνο στη φτέρνα σας;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "pest_5",
+          "formId": "pest",
+          "type": "choice",
+          "label": "5. Είχατε δάχτυλο χεριού ή ποδιού εντελώς πρησμένο και επώδυνο;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "psaid",
+      "title": "PsAID12",
+      "questions": [
+        {
+          "id": "psaid_1",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "1. Πόνος",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_2",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "2. Κόπωση",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_3",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "3. Δερματικά προβλήματα",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_4",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "4. Δραστηριότητες εργασίας ή/και αναψυχής",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_5",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "5. Λειτουργική ικανότητα",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_6",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "6. Δυσφορία",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_7",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "7. Διαταραχές ύπνου",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_8",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "8. Αντιμετώπιση",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_9",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "9. Άγχος, φόβος και αβεβαιότητα",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_10",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "10. Αμηχανία ή/και ντροπή",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_11",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "11. Κοινωνική συμμετοχή",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "psaid_12",
+          "formId": "psaid",
+          "type": "scale",
+          "label": "12. Κατάθλιψη",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wpai",
+      "title": "WPAI:PSO",
+      "questions": [
+        {
+          "id": "wpai_working",
+          "formId": "wpai",
+          "type": "choice",
+          "label": "1. Εργάζεστε προς το παρόν με πληρωμή;",
+          "required": true,
+          "options": [
+            {
+              "value": "no",
+              "label": "ΟΧΙ"
+            },
+            {
+              "value": "yes",
+              "label": "ΝΑΙ"
+            }
+          ]
+        },
+        {
+          "id": "wpai_missed_psoriasis_hours",
+          "formId": "wpai",
+          "type": "number",
+          "label": "2. Ώρες εργασίας που χάσατε λόγω ψωρίασης τις τελευταίες 7 ημέρες",
+          "required": true,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "wpai_working",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "wpai_missed_other_hours",
+          "formId": "wpai",
+          "type": "number",
+          "label": "3. Ώρες εργασίας που χάσατε για άλλους λόγους",
+          "required": true,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "wpai_working",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "wpai_worked_hours",
+          "formId": "wpai",
+          "type": "number",
+          "label": "4. Ώρες που εργαστήκατε πραγματικά",
+          "required": true,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "wpai_working",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "wpai_work_productivity",
+          "formId": "wpai",
+          "type": "scale",
+          "label": "5. Επίδραση στην παραγωγικότητα ενώ εργαζόσασταν",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "showIf": {
+            "id": "wpai_working",
+            "value": "yes"
+          },
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "wpai_daily_activities",
+          "formId": "wpai",
+          "type": "scale",
+          "label": "6. Επίδραση στις συνήθεις καθημερινές δραστηριότητες",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emea",
+      "title": "EMEA HE/MRU",
+      "questions": [
+        {
+          "id": "emea_non_prescription_used",
+          "formId": "emea",
+          "type": "choice",
+          "label": "1.1.1 Χρησιμοποιήσατε μη συνταγογραφούμενες θεραπείες τους τελευταίους 6 μήνες;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_non_prescription_paid",
+          "formId": "emea",
+          "type": "choice",
+          "label": "1.1.1 Καλύψατε μέρος ή το σύνολο του κόστους για μη συνταγογραφούμενες θεραπείες;",
+          "required": true,
+          "showIf": {
+            "id": "emea_non_prescription_used",
+            "value": "yes"
+          },
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_non_prescription_amount",
+          "formId": "emea",
+          "type": "number",
+          "label": "Συνολικό ποσό για μη συνταγογραφούμενες θεραπείες (€)",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_non_prescription_paid",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_prescription_paid",
+          "formId": "emea",
+          "type": "choice",
+          "label": "1.2.1 Καλύψατε κόστος για συνταγογραφούμενες θεραπείες ή φάρμακα;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_prescription_meds_amount",
+          "formId": "emea",
+          "type": "number",
+          "label": "Ποσό για συνταγογραφούμενα φάρμακα (€)",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_prescription_paid",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_prescription_other_amount",
+          "formId": "emea",
+          "type": "number",
+          "label": "Ποσό για άλλες συνταγογραφούμενες θεραπείες (€)",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_prescription_paid",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_dermatologist_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με δερματολόγο",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_rheumatologist_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με ρευματολόγο",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_specialist_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με ειδικό παθολόγο",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_gp_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με γενικό/οικογενειακό γιατρό",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_nurse_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με νοσηλευτή δερματολογικού τμήματος ή ιατρείου",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_home_care_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με κατ’ οίκον φροντίδα",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_pharmacy_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με φαρμακείο",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_other_professional_name",
+          "formId": "emea",
+          "type": "text",
+          "label": "2.1.1 Άλλος επαγγελματίας υγείας, προσδιορίστε",
+          "required": false
+        },
+        {
+          "id": "emea_other_professional_contacts",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.1.1 Επαφές με άλλο επαγγελματία υγείας",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_urgent_care",
+          "formId": "emea",
+          "type": "choice",
+          "label": "2.2.1 Επισκεφθήκατε τμήμα επειγόντων ή επείγουσας φροντίδας;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_urgent_visits",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.1 Πόσες φορές επισκεφθήκατε επείγουσα φροντίδα;",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_urgent_care",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_urgent_overnights",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.1 Πόσες φορές νοσηλευτήκατε με διανυκτέρευση;",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_urgent_care",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_hospitalized",
+          "formId": "emea",
+          "type": "choice",
+          "label": "2.2.2 Νοσηλευτήκατε στο νοσοκομείο λόγω ψωρίασης/ψωριασικής αρθρίτιδας;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_hospitalizations",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.2 Αριθμός νοσηλειών",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_dermatology_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.2 Ημέρες σε δερματολογική κλινική",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_rheumatology_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.2 Ημέρες σε ρευματολογική κλινική",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_internal_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.2 Ημέρες σε παθολογική κλινική",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_other_clinic_name",
+          "formId": "emea",
+          "type": "text",
+          "label": "2.2.2 Άλλη κλινική, προσδιορίστε",
+          "required": false,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_other_clinic_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "2.2.2 Ημέρες σε άλλη κλινική",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_hospitalized",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_work_status",
+          "formId": "emea",
+          "type": "choice",
+          "label": "3.1.1 Κύρια εργασιακή κατάσταση τους τελευταίους 6 μήνες",
+          "required": true,
+          "options": [
+            {
+              "value": "full_time",
+              "label": "Πλήρης απασχόληση"
+            },
+            {
+              "value": "part_time",
+              "label": "Μερική ή ωριαία απασχόληση"
+            },
+            {
+              "value": "self_employed",
+              "label": "Αυτοαπασχολούμενος/-η"
+            },
+            {
+              "value": "student",
+              "label": "Μαθητής/-τρια / Φοιτητής/-τρια"
+            },
+            {
+              "value": "home_family",
+              "label": "Φροντίδα σπιτιού/οικογένειας"
+            },
+            {
+              "value": "unemployed",
+              "label": "Άνεργος/-η"
+            },
+            {
+              "value": "long_term_illness",
+              "label": "Μακροχρόνια ασθένεια/αναπηρία"
+            },
+            {
+              "value": "retired",
+              "label": "Συνταξιούχος"
+            },
+            {
+              "value": "not_working_other",
+              "label": "Δεν εργάζομαι για άλλους λόγους"
+            }
+          ]
+        },
+        {
+          "id": "emea_part_time_hours",
+          "formId": "emea",
+          "type": "number",
+          "label": "3.1.1 Ώρες εβδομαδιαίως για μερική/ωριαία απασχόληση",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_work_status",
+            "value": "part_time"
+          }
+        },
+        {
+          "id": "emea_not_working_due_to_condition",
+          "formId": "emea",
+          "type": "choice",
+          "label": "3.1.2 Αν δεν εργάζεστε, οφείλεται στην ψωρίαση/ψωριασική αρθρίτιδα;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_disability_benefit",
+          "formId": "emea",
+          "type": "choice",
+          "label": "3.1.3 Λάβατε επίδομα αναπηρίας ή μακροχρόνιας ασθένειας;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_prevented_activities",
+          "formId": "emea",
+          "type": "choice",
+          "label": "3.1.4 Σας εμπόδισε από εργασία, σχολείο ή καθημερινές δραστηριότητες;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_absence_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "3.1.4 Σύνολο ημερών απουσίας από εργασία/σχολείο",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_prevented_activities",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_work_productivity",
+          "formId": "emea",
+          "type": "scale",
+          "label": "3.2.1 Επίδραση στην παραγωγικότητα στην εργασία",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "radiusX": 7,
+          "radiusY": 6,
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "emea_daily_activities",
+          "formId": "emea",
+          "type": "scale",
+          "label": "3.2.2 Επίδραση στις συνήθεις καθημερινές δραστηριότητες",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "radiusX": 7,
+          "radiusY": 6,
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "emea_treatment_hours_weekly",
+          "formId": "emea",
+          "type": "number",
+          "label": "4.1.1 Ώρες εβδομαδιαίως για θεραπεία και σχετικές δραστηριότητες",
+          "required": false,
+          "inputType": "number",
+          "min": 0
+        },
+        {
+          "id": "emea_housework_help",
+          "formId": "emea",
+          "type": "choice",
+          "label": "4.2.1 Χρειαστήκατε βοήθεια για δουλειές του σπιτιού;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_paid_help_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "4.2.1 Ημέρες αμειβόμενης βοήθειας",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_housework_help",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_unpaid_help_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "4.2.1 Ημέρες μη αμειβόμενης βοήθειας",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_housework_help",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_care_help",
+          "formId": "emea",
+          "type": "choice",
+          "label": "4.2.2 Χρειαστήκατε βοήθεια από φίλους ή συγγενείς για φροντίδα/θεραπεία/μετάβαση;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_care_help_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "4.2.2 Ημέρες βοήθειας από φίλους ή συγγενείς",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_care_help",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_family_absent",
+          "formId": "emea",
+          "type": "choice",
+          "label": "4.2.3 Έλειψαν φίλοι ή οικογένεια από εργασία/σχολείο για να βοηθήσουν;",
+          "required": true,
+          "options": [
+            {
+              "value": "yes",
+              "label": "Ναι"
+            },
+            {
+              "value": "no",
+              "label": "Όχι"
+            }
+          ]
+        },
+        {
+          "id": "emea_family_absent_days",
+          "formId": "emea",
+          "type": "number",
+          "label": "4.2.3 Σύνολο ημερών απουσίας φίλων/οικογένειας",
+          "required": false,
+          "inputType": "number",
+          "min": 0,
+          "showIf": {
+            "id": "emea_family_absent",
+            "value": "yes"
+          }
+        },
+        {
+          "id": "emea_treatment_burden",
+          "formId": "emea",
+          "type": "scale",
+          "label": "5.1.1 Δυσκολία ενσωμάτωσης θεραπείας στην καθημερινή ρουτίνα",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "radiusX": 7,
+          "radiusY": 6,
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        },
+        {
+          "id": "emea_treatment_adherence",
+          "formId": "emea",
+          "type": "choice",
+          "label": "5.2.1 Χρησιμοποιήσατε τη θεραπεία σύμφωνα με τις οδηγίες του γιατρού;",
+          "required": true,
+          "options": [
+            {
+              "value": "almost_never",
+              "label": "Σχεδόν ποτέ"
+            },
+            {
+              "value": "sometimes",
+              "label": "Μερικές φορές"
+            },
+            {
+              "value": "most_times",
+              "label": "Τις περισσότερες φορές"
+            },
+            {
+              "value": "almost_always",
+              "label": "Σχεδόν πάντα"
+            }
+          ]
+        },
+        {
+          "id": "emea_treatment_satisfaction",
+          "formId": "emea",
+          "type": "scale",
+          "label": "5.3.1 Ικανοποίηση από τη θεραπεία",
+          "required": true,
+          "min": 0,
+          "max": 10,
+          "marker": "ring",
+          "radiusX": 7,
+          "radiusY": 6,
+          "options": [
+            {
+              "value": "0",
+              "label": "0"
+            },
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            },
+            {
+              "value": "3",
+              "label": "3"
+            },
+            {
+              "value": "4",
+              "label": "4"
+            },
+            {
+              "value": "5",
+              "label": "5"
+            },
+            {
+              "value": "6",
+              "label": "6"
+            },
+            {
+              "value": "7",
+              "label": "7"
+            },
+            {
+              "value": "8",
+              "label": "8"
+            },
+            {
+              "value": "9",
+              "label": "9"
+            },
+            {
+              "value": "10",
+              "label": "10"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

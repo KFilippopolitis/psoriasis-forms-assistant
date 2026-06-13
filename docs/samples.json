@@ -1,0 +1,47 @@
+{
+  "note": "Demo samples generated from scripts/sample-answers.json. Run the app locally for live PDF generation.",
+  "files": [
+    {
+      "formId": "dlqi",
+      "title": "DLQI",
+      "fileName": "dlqi-1781359268005.pdf",
+      "url": "./samples/dlqi-1781359268005.pdf"
+    },
+    {
+      "formId": "eq5d",
+      "title": "EQ-5D",
+      "fileName": "eq5d-1781359268470.pdf",
+      "url": "./samples/eq5d-1781359268470.pdf"
+    },
+    {
+      "formId": "hads",
+      "title": "HADS",
+      "fileName": "hads-1781359268790.pdf",
+      "url": "./samples/hads-1781359268790.pdf"
+    },
+    {
+      "formId": "pest",
+      "title": "PEST",
+      "fileName": "pest-1781359269065.pdf",
+      "url": "./samples/pest-1781359269065.pdf"
+    },
+    {
+      "formId": "psaid",
+      "title": "PsAID12",
+      "fileName": "psaid-1781359269330.pdf",
+      "url": "./samples/psaid-1781359269330.pdf"
+    },
+    {
+      "formId": "wpai",
+      "title": "WPAI:PSO",
+      "fileName": "wpai-1781359269627.pdf",
+      "url": "./samples/wpai-1781359269627.pdf"
+    },
+    {
+      "formId": "emea",
+      "title": "EMEA HE/MRU",
+      "fileName": "emea-1781359269918.pdf",
+      "url": "./samples/emea-1781359269918.pdf"
+    }
+  ]
+}

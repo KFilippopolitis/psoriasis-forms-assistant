@@ -1,0 +1,18 @@
+{
+  "name": "psoriasis-pdf-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build:pages": "node scripts/build-pages.js",
+    "check": "node scripts/validate-config.js",
+    "sample": "node scripts/generate-sample.js",
+    "pest:marks": "node scripts/generate-pest-marks.js"
+  },
+  "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
+    "express": "^4.19.2",
+    "pdf-lib": "^1.17.1"
+  }
+}

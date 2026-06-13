@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="el">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Psoriasis Forms Assistant</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar">
+        <div>
+          <h1>Psoriasis Forms Assistant</h1>
+          <p id="draft-status">Loading...</p>
+        </div>
+        <div id="form-nav" role="list" aria-label="Questionnaire progress"></div>
+        <div id="generate-panel" class="generate-panel">
+          <button id="generate-button" type="button" disabled>Generate PDFs</button>
+        </div>
+      </aside>
+
+      <section class="quiz-panel">
+        <header class="quiz-header">
+          <div>
+            <p id="form-title"></p>
+            <h2 id="question-label"></h2>
+          </div>
+          <span id="progress-label"></span>
+        </header>
+
+        <div class="progress-track" aria-hidden="true">
+          <div id="progress-fill"></div>
+        </div>
+
+
+        <form id="question-form">
+          <div id="control-host"></div>
+          <p id="error-message" role="alert"></p>
+        </form>
+
+        <footer class="actions">
+          <button id="back-button" type="button">Back</button>
+          <button id="clear-button" type="button">Clear draft</button>
+          <button id="next-button" type="button">Next</button>
+        </footer>
+
+        <section id="result-panel" class="result-panel" hidden>
+          <h3>Filled PDFs</h3>
+          <div id="result-links"></div>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
