@@ -9,8 +9,10 @@ let currentIndex = 0;
 
 const elements = {
   draftStatus: document.querySelector('#draft-status'),
+  demoBanner: document.querySelector('#demo-banner'),
   formNav: document.querySelector('#form-nav'),
   formTitle: document.querySelector('#form-title'),
+  formDescription: document.querySelector('#form-description'),
   questionLabel: document.querySelector('#question-label'),
   progressLabel: document.querySelector('#progress-label'),
   progressFill: document.querySelector('#progress-fill'),
@@ -331,6 +333,9 @@ function render() {
   const progress = ((currentIndex + 1) / visibleQuestions.length) * 100;
   const form = forms.find((item) => item.id === question.formId);
   elements.formTitle.textContent = form?.title ?? question.formId;
+  const description = form?.description ?? '';
+  elements.formDescription.textContent = description;
+  elements.formDescription.hidden = !description;
   elements.questionLabel.textContent = question.label;
   elements.progressLabel.textContent = `${currentIndex + 1} of ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
@@ -436,6 +441,10 @@ async function init() {
   loadDraft();
   pruneDraft();
   elements.draftStatus.textContent = Object.keys(answers).length ? 'Draft loaded' : 'No saved draft';
+  if (IS_STATIC) {
+    elements.demoBanner.textContent = 'Demo mode: try the full questionnaire here. Generate PDFs shows pre-filled samples — run locally for live export.';
+    elements.demoBanner.hidden = false;
+  }
   render();
 }
 

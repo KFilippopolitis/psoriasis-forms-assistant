@@ -138,6 +138,7 @@ export const forms = [
   {
     id: 'dlqi',
     title: 'DLQI',
+    description: 'Δείκτης ποιότητας ζωής στη δερματολογία. Απαντήστε για την περασμένη εβδομάδα.',
     template: PDFS.dlqi,
     questions: [
       dlqiChoice('dlqi_1', '1. Κνησμός, ενόχληση, πόνος ή τσούξιμο δέρματος την περασμένη εβδομάδα', 0, 203.7),
@@ -170,6 +171,7 @@ export const forms = [
   {
     id: 'eq5d',
     title: 'EQ-5D',
+    description: 'Ερωτηματολόγιο υγείας EQ-5D. Σημειώστε την απάντηση που περιγράφει καλύτερα την υγεία σας σήμερα.',
     template: PDFS.eq5d,
     questions: [
       eq5dChoice('eq5d_mobility', 'Κινητικότητα', [120.6, 143.7, 166.8], ['Δεν έχω κανένα πρόβλημα στο περπάτημα', 'Έχω μερικά προβλήματα στο περπάτημα', 'Είμαι καθηλωμένος/η στο κρεβάτι']),
@@ -185,6 +187,7 @@ export const forms = [
   {
     id: 'hads',
     title: 'HADS',
+    description: 'Κλίμακα νοσοκομειακού άγχους και κατάθλιψης (HADS). Απαντήστε για το πώς νιώθατε την τελευταία εβδομάδα.',
     template: PDFS.hads,
     questions: [
       choice('hads_1', 'Νιώθω ανήσυχος/η ή εκνευρισμένος/η', hadsOptions(0, HADS_LEFT_ANXIETY_X, [260.4, 271.4, 282.4, 293.4], ['Σχεδόν πάντα', 'Συχνά', 'Μερικές φορές', 'Ποτέ'])),
@@ -206,6 +209,7 @@ export const forms = [
   {
     id: 'pest',
     title: 'PEST',
+    description: 'Εργαλείο διαλογής ψωριασικής αρθρίτιδας (PEST). Η επιλογή αρθρώσεων είναι προαιρετική.',
     template: PDFS.pest,
     questions: [
       {
@@ -254,6 +258,7 @@ export const forms = [
   {
     id: 'psaid',
     title: 'PsAID12',
+    description: 'Αντίληψη ασθενούς για τον αντίκτυπο της ψωριασικής αρθρίτιδας (PsAID12).',
     template: PDFS.psaid,
     questions: [
       scale('psaid_1', 'psaid', '1. Πόνος', 0, 214.7, psaidXsPage1, { marker: 'ring' }),
@@ -273,6 +278,7 @@ export const forms = [
   {
     id: 'wpai',
     title: 'WPAI:PSO',
+    description: 'Παραγωγικότητα εργασίας και επιπτώσεις σε καθημερινές δραστηριότητες (WPAI:PSO).',
     template: PDFS.wpai,
     questions: [
       choice('wpai_working', '1. Εργάζεστε προς το παρόν με πληρωμή;', [
@@ -289,6 +295,7 @@ export const forms = [
   {
     id: 'emea',
     title: 'EMEA HE/MRU',
+    description: 'Κόστος, χρήση υπηρεσιών υγείας και επιπτώσεις στη ζωή του ασθενούς. Τα πεδία επαφών είναι προαιρετικά.',
     template: PDFS.emea,
     questions: [
       emeaYesNo('emea_non_prescription_used', '1.1.1 Χρησιμοποιήσατε μη συνταγογραφούμενες θεραπείες τους τελευταίους 6 μήνες;', 1, 213.3, 227.6),
@@ -390,6 +397,7 @@ export function clientForms() {
   return forms.map((form) => ({
     id: form.id,
     title: form.title,
+    description: form.description,
     questions: form.questions.map(({ placements, options, ...question }) => ({
       ...question,
       options: options?.map(({ placements: _placements, ...opt }) => opt),

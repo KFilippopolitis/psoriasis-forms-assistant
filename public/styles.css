@@ -54,6 +54,16 @@ input {
   font-size: 14px;
 }
 
+.demo-banner {
+  margin-top: 10px !important;
+  padding: 10px 12px;
+  border: 1px solid #b5d1cb;
+  border-radius: 6px;
+  background: #eff8f5;
+  color: #2f5f54;
+  line-height: 1.4;
+}
+
 #form-nav {
   display: grid;
   gap: 12px;
@@ -133,6 +143,13 @@ input {
   margin: 0 0 8px;
   color: var(--accent-strong);
   font-weight: 700;
+}
+
+.form-description {
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.45;
 }
 
 #question-label {
