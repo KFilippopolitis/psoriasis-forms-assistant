@@ -57,6 +57,10 @@ async function buildStaticApp() {
 
   await copyFile(path.join(rootDir, 'public', 'styles.css'), path.join(docsDir, 'styles.css'));
   await copyFile(path.join(rootDir, 'public', 'app.js'), path.join(docsDir, 'app.js'));
+  await copyFile(
+    path.join(rootDir, 'public', 'assets', 'pest-body-map.png'),
+    path.join(docsDir, 'assets', 'pest-body-map.png'),
+  );
 
   console.log(`Built GitHub Pages site in ${docsDir}`);
   console.log(`Included ${files.length} sample PDFs for the live demo.`);

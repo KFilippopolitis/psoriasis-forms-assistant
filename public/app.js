@@ -238,7 +238,7 @@ function renderPestBodyMap(question) {
   const stage = document.createElement('div');
   stage.className = 'pest-body-map__stage';
   const image = document.createElement('img');
-  image.src = '/assets/pest-body-map.png';
+  image.src = IS_STATIC ? './assets/pest-body-map.png' : '/assets/pest-body-map.png';
   image.alt = '';
   stage.append(image);
 
