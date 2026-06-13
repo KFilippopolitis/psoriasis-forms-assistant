@@ -9,7 +9,6 @@ let currentIndex = 0;
 
 const elements = {
   draftStatus: document.querySelector('#draft-status'),
-  demoBanner: document.querySelector('#demo-banner'),
   formNav: document.querySelector('#form-nav'),
   formTitle: document.querySelector('#form-title'),
   formDescription: document.querySelector('#form-description'),
@@ -447,10 +446,6 @@ async function init() {
   loadDraft();
   pruneDraft();
   elements.draftStatus.textContent = Object.keys(answers).length ? 'Φορτώθηκε προσχέδιο' : 'Δεν υπάρχει αποθηκευμένο προσχέδιο';
-  if (IS_STATIC) {
-    elements.demoBanner.textContent = 'Λειτουργία επίδειξης: δοκιμάστε το ερωτηματολόγιο εδώ. Η δημιουργία PDF εμφανίζει προσυμπληρωμένα δείγματα — εκτελέστε τοπικά για πλήρη εξαγωγή.';
-    elements.demoBanner.hidden = false;
-  }
   render();
 }
 
