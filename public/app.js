@@ -18,6 +18,7 @@ const elements = {
   progressLabel: document.querySelector('#progress-label'),
   progressFill: document.querySelector('#progress-fill'),
   controlHost: document.querySelector('#control-host'),
+  answerHint: document.querySelector('#answer-hint'),
   questionForm: document.querySelector('#question-form'),
   errorMessage: document.querySelector('#error-message'),
   backButton: document.querySelector('#back-button'),
@@ -341,6 +342,7 @@ function render() {
   const prompt = question.prompt ?? '';
   elements.questionPrompt.textContent = prompt;
   elements.questionPrompt.hidden = !prompt;
+  elements.answerHint.hidden = question.type !== 'choice' && question.type !== 'scale';
   elements.progressLabel.textContent = `${currentIndex + 1} από ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
   elements.backButton.disabled = currentIndex === 0;
