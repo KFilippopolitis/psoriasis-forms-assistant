@@ -74,7 +74,7 @@ function pruneDraft() {
 
 function saveDraft() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(answers));
-  elements.draftStatus.textContent = `Draft saved ${new Date().toLocaleTimeString()}`;
+  elements.draftStatus.textContent = `Αποθηκεύτηκε προσχέδιο ${new Date().toLocaleTimeString('el-GR')}`;
 }
 
 function isVisible(question) {
@@ -113,7 +113,7 @@ function allVisibleQuestionsAnswered() {
 function updateGenerateState() {
   const complete = allVisibleQuestionsAnswered();
   elements.generateButton.disabled = !complete;
-  elements.generateButton.title = complete ? '' : 'Complete all questions before generating PDFs.';
+  elements.generateButton.title = complete ? '' : 'Ολοκληρώστε όλες τις ερωτήσεις πριν τη δημιουργία PDF.';
 }
 
 function renderNav() {
@@ -270,7 +270,7 @@ function renderPestBodyMap(question) {
 
   const summary = document.createElement('p');
   summary.className = 'pest-body-map__summary';
-  summary.textContent = values.size ? values.size + ' selected' : 'Click the joints on the diagram.';
+  summary.textContent = values.size ? `${values.size} επιλεγμένες` : 'Κάντε κλικ στις αρθρώσεις στο διάγραμμα.';
 
   wrap.append(stage, summary);
   elements.controlHost.append(wrap);
@@ -289,7 +289,7 @@ function renderField(question) {
   if (question.min !== undefined || question.max !== undefined) {
     const hint = document.createElement('p');
     hint.className = 'hint';
-    hint.textContent = `Allowed range: ${question.min ?? '-∞'} to ${question.max ?? '∞'}`;
+    hint.textContent = `Επιτρεπτό εύρος: ${question.min ?? '-∞'} έως ${question.max ?? '∞'}`;
     elements.controlHost.append(hint);
   }
 
@@ -300,22 +300,22 @@ function validateCurrent() {
   const question = visibleQuestions[currentIndex];
   if (!question) return true;
   if (!isAnswered(question)) {
-    elements.errorMessage.textContent = 'Please answer this question before continuing.';
+    elements.errorMessage.textContent = 'Απαντήστε στην ερώτηση για να συνεχίσετε.';
     return false;
   }
   const value = answerValue(question);
   if ((question.type === 'number' || question.inputType === 'number') && value !== '' && value !== undefined) {
     const numeric = Number(value);
     if (!Number.isFinite(numeric)) {
-      elements.errorMessage.textContent = 'Please enter a number.';
+      elements.errorMessage.textContent = 'Εισάγετε αριθμό.';
       return false;
     }
     if (question.min !== undefined && numeric < question.min) {
-      elements.errorMessage.textContent = `The value must be at least ${question.min}.`;
+      elements.errorMessage.textContent = `Η τιμή πρέπει να είναι τουλάχιστον ${question.min}.`;
       return false;
     }
     if (question.max !== undefined && numeric > question.max) {
-      elements.errorMessage.textContent = `The value must be at most ${question.max}.`;
+      elements.errorMessage.textContent = `Η τιμή πρέπει να είναι το πολύ ${question.max}.`;
       return false;
     }
   }
@@ -341,11 +341,11 @@ function render() {
   const prompt = question.prompt ?? '';
   elements.questionPrompt.textContent = prompt;
   elements.questionPrompt.hidden = !prompt;
-  elements.progressLabel.textContent = `${currentIndex + 1} of ${visibleQuestions.length}`;
+  elements.progressLabel.textContent = `${currentIndex + 1} από ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
   elements.backButton.disabled = currentIndex === 0;
   elements.nextButton.hidden = currentIndex === visibleQuestions.length - 1;
-  elements.nextButton.textContent = 'Next';
+  elements.nextButton.textContent = 'Επόμενο';
   updateGenerateState();
 
   if (question.type === 'choice' || question.type === 'scale') renderChoice(question);
@@ -361,12 +361,12 @@ async function generate() {
   if (missing) {
     currentIndex = visibleQuestions.indexOf(missing);
     render();
-    elements.errorMessage.textContent = 'This required question still needs an answer.';
+    elements.errorMessage.textContent = 'Αυτή η υποχρεωτική ερώτηση χρειάζεται απάντηση.';
     return;
   }
 
   elements.generateButton.disabled = true;
-  elements.generateButton.textContent = 'Generating...';
+  elements.generateButton.textContent = 'Δημιουργία...';
   elements.resultPanel.hidden = true;
 
   try {
@@ -374,7 +374,7 @@ async function generate() {
     if (IS_STATIC) {
       const response = await fetch('./samples.json');
       const payload = await response.json();
-      if (!response.ok) throw new Error('Demo samples are unavailable.');
+      if (!response.ok) throw new Error('Τα δείγματα επίδειξης δεν είναι διαθέσιμα.');
       files = payload.files;
     } else {
       const response = await fetch('/api/generate', {
@@ -391,7 +391,7 @@ async function generate() {
     if (IS_STATIC) {
       const note = document.createElement('p');
       note.className = 'demo-note';
-      note.textContent = 'Demo mode: sample PDFs from a pre-filled questionnaire. Run locally for live generation from your answers.';
+      note.textContent = 'Λειτουργία επίδειξης: εμφανίζονται προσυμπληρωμένα δείγματα PDF. Εκτελέστε τοπικά για δημιουργία από τις δικές σας απαντήσεις.';
       elements.resultLinks.append(note);
     }
     for (const file of files) {
@@ -407,7 +407,7 @@ async function generate() {
     elements.errorMessage.textContent = error.message;
   } finally {
     elements.generateButton.disabled = false;
-    elements.generateButton.textContent = 'Generate PDFs';
+    elements.generateButton.textContent = 'Δημιουργία PDF';
   }
 }
 
@@ -432,7 +432,7 @@ elements.questionForm.addEventListener('submit', (event) => {
 elements.clearButton.addEventListener('click', () => {
   answers = {};
   localStorage.removeItem(STORAGE_KEY);
-  elements.draftStatus.textContent = 'Draft cleared';
+  elements.draftStatus.textContent = 'Το προσχέδιο διαγράφηκε';
   currentIndex = 0;
   render();
 });
@@ -444,15 +444,15 @@ async function init() {
   questions = forms.flatMap((form) => form.questions);
   loadDraft();
   pruneDraft();
-  elements.draftStatus.textContent = Object.keys(answers).length ? 'Draft loaded' : 'No saved draft';
+  elements.draftStatus.textContent = Object.keys(answers).length ? 'Φορτώθηκε προσχέδιο' : 'Δεν υπάρχει αποθηκευμένο προσχέδιο';
   if (IS_STATIC) {
-    elements.demoBanner.textContent = 'Demo mode: try the full questionnaire here. Generate PDFs shows pre-filled samples — run locally for live export.';
+    elements.demoBanner.textContent = 'Λειτουργία επίδειξης: δοκιμάστε το ερωτηματολόγιο εδώ. Η δημιουργία PDF εμφανίζει προσυμπληρωμένα δείγματα — εκτελέστε τοπικά για πλήρη εξαγωγή.';
     elements.demoBanner.hidden = false;
   }
   render();
 }
 
 init().catch((error) => {
-  elements.draftStatus.textContent = 'Failed to load app';
+  elements.draftStatus.textContent = 'Αποτυχία φόρτωσης εφαρμογής';
   elements.errorMessage.textContent = error.message;
 });

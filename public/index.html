@@ -3,20 +3,20 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Psoriasis Forms Assistant</title>
+    <title>Βοηθός Ερωτηματολογίων Ψωρίασης</title>
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
     <main class="app-shell">
       <aside class="sidebar">
         <div>
-          <h1>Psoriasis Forms Assistant</h1>
-          <p id="draft-status">Loading...</p>
+          <h1>Βοηθός Ερωτηματολογίων Ψωρίασης</h1>
+          <p id="draft-status">Φόρτωση...</p>
           <p id="demo-banner" class="demo-banner" hidden></p>
         </div>
-        <div id="form-nav" role="list" aria-label="Questionnaire progress"></div>
+        <div id="form-nav" role="list" aria-label="Πρόοδος ερωτηματολογίων"></div>
         <div id="generate-panel" class="generate-panel">
-          <button id="generate-button" type="button" disabled>Generate PDFs</button>
+          <button id="generate-button" type="button" disabled>Δημιουργία PDF</button>
         </div>
       </aside>
 
@@ -42,13 +42,13 @@
         </form>
 
         <footer class="actions">
-          <button id="back-button" type="button">Back</button>
-          <button id="clear-button" type="button">Clear draft</button>
-          <button id="next-button" type="button">Next</button>
+          <button id="back-button" type="button">Πίσω</button>
+          <button id="clear-button" type="button">Καθαρισμός προσχεδίου</button>
+          <button id="next-button" type="button">Επόμενο</button>
         </footer>
 
         <section id="result-panel" class="result-panel" hidden>
-          <h3>Filled PDFs</h3>
+          <h3>Συμπληρωμένα PDF</h3>
           <div id="result-links"></div>
         </section>
       </section>
