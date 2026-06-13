@@ -21,6 +21,7 @@ const elements = {
   questionPrompt: document.querySelector('#question-prompt'),
   progressLabel: document.querySelector('#progress-label'),
   progressFill: document.querySelector('#progress-fill'),
+  completionBanner: document.querySelector('#completion-banner'),
   controlHost: document.querySelector('#control-host'),
   answerHint: document.querySelector('#answer-hint'),
   questionForm: document.querySelector('#question-form'),
@@ -30,6 +31,7 @@ const elements = {
   clearButtonMobile: document.querySelector('#clear-button-mobile'),
   nextButton: document.querySelector('#next-button'),
   generateButton: document.querySelector('#generate-button'),
+  generateButtonFooter: document.querySelector('#generate-button-footer'),
   resultPanel: document.querySelector('#result-panel'),
   resultLinks: document.querySelector('#result-links'),
 };
@@ -135,9 +137,17 @@ function toggleMenu() {
   else openMenu();
 }
 
+function setGenerateButtons({ disabled, text }) {
+  for (const button of [elements.generateButton, elements.generateButtonFooter]) {
+    if (!button) continue;
+    button.disabled = disabled;
+    button.textContent = text;
+  }
+}
+
 function updateGenerateState() {
   const complete = allVisibleQuestionsAnswered();
-  elements.generateButton.disabled = !complete;
+  setGenerateButtons({ disabled: !complete, text: 'Δημιουργία PDF' });
   elements.generateButton.title = complete ? '' : 'Ολοκληρώστε όλες τις ερωτήσεις πριν τη δημιουργία PDF.';
 }
 
@@ -358,6 +368,8 @@ function render() {
   if (!question) return;
 
   const progress = ((currentIndex + 1) / visibleQuestions.length) * 100;
+  const complete = allVisibleQuestionsAnswered();
+  const isLast = currentIndex === visibleQuestions.length - 1;
   const form = forms.find((item) => item.id === question.formId);
   elements.formTitle.textContent = form?.title ?? question.formId;
   const description = form?.description ?? '';
@@ -372,8 +384,10 @@ function render() {
   elements.mobileFormTitle.textContent = form?.title ?? question.formId;
   elements.mobileProgressLabel.textContent = `${currentIndex + 1} από ${visibleQuestions.length}`;
   elements.progressFill.style.width = `${progress}%`;
+  elements.completionBanner.hidden = !complete;
   elements.backButton.disabled = currentIndex === 0;
-  elements.nextButton.hidden = currentIndex === visibleQuestions.length - 1;
+  elements.nextButton.hidden = isLast;
+  elements.generateButtonFooter.hidden = !(isLast && complete);
   elements.nextButton.textContent = 'Επόμενο';
   updateGenerateState();
 
@@ -394,8 +408,7 @@ async function generate() {
     return;
   }
 
-  elements.generateButton.disabled = true;
-  elements.generateButton.textContent = 'Δημιουργία...';
+  setGenerateButtons({ disabled: true, text: 'Δημιουργία...' });
   elements.resultPanel.hidden = true;
 
   try {
@@ -432,11 +445,11 @@ async function generate() {
       elements.resultLinks.append(link);
     }
     elements.resultPanel.hidden = false;
+    elements.resultPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
   } catch (error) {
     elements.errorMessage.textContent = error.message;
   } finally {
-    elements.generateButton.disabled = false;
-    elements.generateButton.textContent = 'Δημιουργία PDF';
+    updateGenerateState();
   }
 }
 
@@ -452,6 +465,7 @@ elements.nextButton.addEventListener('click', () => {
 });
 
 elements.generateButton.addEventListener('click', generate);
+elements.generateButtonFooter.addEventListener('click', generate);
 
 elements.menuButton.addEventListener('click', toggleMenu);
 elements.menuOverlay.addEventListener('click', closeMenu);
@@ -462,6 +476,7 @@ document.addEventListener('keydown', (event) => {
 elements.questionForm.addEventListener('submit', (event) => {
   event.preventDefault();
   if (!elements.nextButton.hidden) elements.nextButton.click();
+  else if (!elements.generateButtonFooter.hidden && !elements.generateButtonFooter.disabled) generate();
 });
 
 function clearDraft() {

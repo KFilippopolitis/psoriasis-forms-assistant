@@ -201,6 +201,17 @@ input {
   transition: width 160ms ease;
 }
 
+.completion-banner {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #8ebdb2;
+  border-radius: 6px;
+  background: #e8f4f0;
+  color: #23443b;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 .generate-panel {
   display: grid;
   gap: 8px;
@@ -391,8 +402,15 @@ input {
   color: #fff;
 }
 
-#next-button[hidden] {
+#next-button[hidden],
+.generate-button-footer[hidden] {
   display: none;
+}
+
+.generate-button-footer {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
 }
 
 .result-panel {
@@ -615,7 +633,8 @@ input {
   }
 
   .actions #back-button,
-  .actions #next-button {
+  .actions #next-button,
+  .actions .generate-button-footer {
     flex: 1 1 0;
   }
 
