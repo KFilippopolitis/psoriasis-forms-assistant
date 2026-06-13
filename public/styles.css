@@ -54,10 +54,29 @@ input {
   font-size: 14px;
 }
 
-.privacy-disclaimer {
-  margin-top: 10px !important;
+.privacy-notice {
+  margin-top: 12px;
+  padding: 12px 12px 11px;
+  border: 1px solid #8ebdb2;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+  background: #e8f4f0;
+}
+
+.privacy-notice__title {
+  margin: 0 0 6px;
+  color: var(--accent-strong);
   font-size: 13px;
-  line-height: 1.45;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.privacy-notice__text {
+  margin: 0;
+  color: #23443b;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 #form-nav {
