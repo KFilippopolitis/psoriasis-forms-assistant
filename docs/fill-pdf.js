@@ -13,6 +13,10 @@ function shouldApplyTextValue(value) {
 }
 
 function questionPlacements(question, value) {
+  if (question.positiveOnly) {
+    const numeric = Number(value);
+    if (!Number.isFinite(numeric) || numeric <= 0) return [];
+  }
   if (!shouldApplyTextValue(value) && question.type !== 'multi') return [];
 
   if (question.type === 'choice' || question.type === 'scale') {

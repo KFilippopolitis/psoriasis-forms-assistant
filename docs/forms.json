@@ -5099,6 +5099,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5125,6 +5126,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5151,6 +5153,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5177,6 +5180,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5203,6 +5207,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5229,6 +5234,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5255,6 +5261,7 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
             {
               "type": "check",
@@ -5266,7 +5273,7 @@
             {
               "type": "text",
               "page": 2,
-              "x": 446.6,
+              "x": 148.9,
               "top": 356.9,
               "width": 45,
               "fontSize": 10
@@ -5305,7 +5312,15 @@
           "required": false,
           "inputType": "number",
           "min": 0,
+          "positiveOnly": true,
           "placements": [
+            {
+              "type": "check",
+              "page": 2,
+              "x": 133.8,
+              "top": 375.2,
+              "size": 13
+            },
             {
               "type": "text",
               "page": 2,

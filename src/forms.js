@@ -123,10 +123,10 @@ const emeaYesNo = (id, label, page, yesTop, noTop, extra = {}) => choice(id, 'em
   option(['yes', 'Ναι'], [emeaRing(page, 138.1, yesTop)]),
   option(['no', 'Όχι'], [emeaRing(page, 138.1, noTop)]),
 ], true, extra);
-const emeaContact = (id, label, markTop, valueTop, extra = {}) => text(id, 'emea', label, [
+const emeaContact = (id, label, markTop, valueTop, valueX = 446.6) => text(id, 'emea', label, [
   emeaCheck(2, 134.8, markTop),
-  emeaValue(2, 446.6, valueTop, 45),
-], { type: 'number', inputType: 'number', min: 0, ...extra });
+  emeaValue(2, valueX, valueTop, 45),
+], { type: 'number', inputType: 'number', min: 0, positiveOnly: true });
 
 const HADS_LEFT_ANXIETY_X = 35;
 const HADS_LEFT_DEPRESSION_X = 60;
@@ -349,9 +349,9 @@ export const forms = [
       emeaContact('emea_gp_contacts', '2.1.1 Επαφές με γενικό/οικογενειακό γιατρό', 266.7, 267.7),
       emeaContact('emea_nurse_contacts', '2.1.1 Επαφές με νοσηλευτή δερματολογικού τμήματος ή ιατρείου', 287.0, 288.0),
       emeaContact('emea_home_care_contacts', '2.1.1 Επαφές με κατ’ οίκον φροντίδα', 307.2, 322.4),
-      emeaContact('emea_pharmacy_contacts', '2.1.1 Επαφές με φαρμακείο', 341.7, 356.9),
+      emeaContact('emea_pharmacy_contacts', '2.1.1 Επαφές με φαρμακείο', 341.7, 356.9, 148.9),
       text('emea_other_professional_name', 'emea', '2.1.1 Άλλος επαγγελματίας υγείας, προσδιορίστε', [emeaCheck(2, 134.8, 376.2), emeaValue(2, 209.9, 391.4, 115)], { required: false }),
-      text('emea_other_professional_contacts', 'emea', '2.1.1 Επαφές με άλλο επαγγελματία υγείας', [emeaValue(2, 446.6, 391.4, 45)], { type: 'number', inputType: 'number', min: 0 }),
+      text('emea_other_professional_contacts', 'emea', '2.1.1 Επαφές με άλλο επαγγελματία υγείας', [emeaCheck(2, 134.8, 376.2), emeaValue(2, 446.6, 391.4, 45)], { type: 'number', inputType: 'number', min: 0, positiveOnly: true }),
       emeaYesNo('emea_urgent_care', '2.2.1 Επισκεφθήκατε τμήμα επειγόντων ή επείγουσας φροντίδας;', 2, 514.2, 568.9),
       text('emea_urgent_visits', 'emea', '2.2.1 Πόσες φορές επισκεφθήκατε επείγουσα φροντίδα;', [emeaValue(2, 425.0, 521.8, 45)], { type: 'number', inputType: 'number', min: 0, showIf: { id: 'emea_urgent_care', value: 'yes' } }),
       text('emea_urgent_overnights', 'emea', '2.2.1 Πόσες φορές νοσηλευτήκατε με διανυκτέρευση;', [emeaValue(2, 425.0, 546.3, 45)], { type: 'number', inputType: 'number', min: 0, showIf: { id: 'emea_urgent_care', value: 'yes' } }),
