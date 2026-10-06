@@ -431,14 +431,19 @@ export function allQuestions() {
   })));
 }
 
-export function clientForms() {
+export function clientForms({ placements = false } = {}) {
   return forms.map((form) => ({
     id: form.id,
     title: form.title,
     description: form.description,
-    questions: form.questions.map(({ placements, options, ...question }) => ({
+    ...(placements ? { template: form.template } : {}),
+    questions: form.questions.map(({ placements: questionPlacements, options, ...question }) => ({
       ...question,
-      options: options?.map(({ placements: _placements, ...opt }) => opt),
+      ...(placements && questionPlacements ? { placements: questionPlacements } : {}),
+      options: options?.map(({ placements: optionPlacements, ...opt }) => ({
+        ...opt,
+        ...(placements && optionPlacements ? { placements: optionPlacements } : {}),
+      })),
     })),
   }));
 }

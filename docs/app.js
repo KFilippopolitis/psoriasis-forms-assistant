@@ -413,10 +413,8 @@ async function generate() {
   try {
     let files;
     if (IS_STATIC) {
-      const response = await fetch('./samples.json');
-      const payload = await response.json();
-      if (!response.ok) throw new Error('Τα δείγματα επίδειξης δεν είναι διαθέσιμα.');
-      files = payload.files;
+      const { fillAnswerPdfs } = await import('./fill-browser.js');
+      files = await fillAnswerPdfs(forms, answers);
     } else {
       const response = await fetch('/api/generate', {
         method: 'POST',
@@ -429,12 +427,6 @@ async function generate() {
     }
 
     elements.resultLinks.innerHTML = '';
-    if (IS_STATIC) {
-      const note = document.createElement('p');
-      note.className = 'demo-note';
-      note.textContent = 'Λειτουργία επίδειξης: εμφανίζονται προσυμπληρωμένα δείγματα PDF. Εκτελέστε τοπικά για δημιουργία από τις δικές σας απαντήσεις.';
-      elements.resultLinks.append(note);
-    }
     for (const file of files) {
       const link = document.createElement('a');
       link.href = file.url;

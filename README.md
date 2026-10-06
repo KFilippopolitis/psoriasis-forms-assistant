@@ -6,14 +6,14 @@ A guided web app for completing Greek psoriasis clinical questionnaires and gene
 
 **[Open the demo on GitHub Pages](https://kfilippopolitis.github.io/psoriasis-forms-assistant/)**
 
-The hosted preview runs the full questionnaire UI in the browser. PDF generation on GitHub Pages shows pre-filled sample PDFs. For live PDF generation from your own answers, run the app locally (see below).
+The hosted preview runs the full questionnaire UI in the browser and fills the PDFs from the answers you select.
 
 ## Features
 
 - Step-by-step questionnaire for 7 validated Greek forms
 - Draft autosave in the browser (`localStorage`)
 - Conditional questions (e.g. DLQI follow-ups, PEST body map)
-- Server-side PDF filling with precise mark placement on official templates
+- PDF filling with precise mark placement on official templates
 - Config validation and sample PDF generation scripts
 
 ## Forms included
@@ -79,7 +79,7 @@ In the repository settings, set **Pages → Build and deployment → Source** to
 
 1. The UI loads form definitions from `/api/forms` (or `forms.json` in static demo mode).
 2. Answers are collected question by question and stored in `localStorage`.
-3. On **Generate PDFs**, the server reads answers, maps each value to coordinates on the template PDFs, and writes filled files to `filled/<timestamp>/`.
+3. On **Generate PDFs**, each answer is mapped to coordinates on the official template. Locally the server writes the files; the GitHub Pages demo fills them in the browser from the same answers.
 4. Download links are shown for each completed form.
 
 ## Requirements
