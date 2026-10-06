@@ -821,11 +821,7 @@
             },
             {
               "value": "lower_back",
-              "label": "Κάτω πλάτη"
-            },
-            {
-              "value": "waist",
-              "label": "Περιοχή μέσης"
+              "label": "Κάτω πλάτη / περιοχή μέσης"
             },
             {
               "value": "left_elbow",
