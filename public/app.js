@@ -34,7 +34,10 @@ const elements = {
   generateButtonFooter: document.querySelector('#generate-button-footer'),
   resultPanel: document.querySelector('#result-panel'),
   resultLinks: document.querySelector('#result-links'),
+  downloadAllButton: document.querySelector('#download-all-button'),
 };
+
+let generatedFiles = [];
 
 const PEST_JOINT_HOTSPOTS = {
   neck: { x: 51.5, y: 20 },
@@ -426,13 +429,14 @@ async function generate() {
       files = payload.files;
     }
 
+    generatedFiles = files;
     elements.resultLinks.innerHTML = '';
     for (const file of files) {
+      const fileName = pdfDownloadName(file);
       const link = document.createElement('a');
       link.href = file.url;
-      link.target = '_blank';
-      link.rel = 'noreferrer';
-      link.textContent = `${file.title} (${file.fileName})`;
+      link.download = fileName;
+      link.textContent = `${file.title} (${fileName})`;
       elements.resultLinks.append(link);
     }
     elements.resultPanel.hidden = false;
@@ -455,8 +459,30 @@ elements.nextButton.addEventListener('click', () => {
   render();
 });
 
+function pdfDownloadName(file) {
+  const base = String(file.title || file.fileName || 'form')
+    .replace(/[\\/:*?"<>|]/g, '-')
+    .replace(/\s+/g, ' ')
+    .trim();
+  return base.toLowerCase().endsWith('.pdf') ? base : `${base}.pdf`;
+}
+
+function downloadFile(url, fileName) {
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = fileName;
+  document.body.append(link);
+  link.click();
+  link.remove();
+}
+
+function downloadAllFiles() {
+  for (const file of generatedFiles) downloadFile(file.url, pdfDownloadName(file));
+}
+
 elements.generateButton.addEventListener('click', generate);
 elements.generateButtonFooter.addEventListener('click', generate);
+elements.downloadAllButton.addEventListener('click', downloadAllFiles);
 
 elements.menuButton.addEventListener('click', toggleMenu);
 elements.menuOverlay.addEventListener('click', closeMenu);
